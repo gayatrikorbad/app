@@ -94,8 +94,9 @@ class _MyLoginState extends State<MyLogin> {
                             children: [
                               TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(context, 'register');
+                                  Navigator.pushReplacementNamed(context, 'register');
                                 },
+                                style: ButtonStyle(),
                                 child: Text(
                                   'Sign Up',
                                   textAlign: TextAlign.left,
@@ -104,7 +105,6 @@ class _MyLoginState extends State<MyLogin> {
                                       color: Color(0xff4c505b),
                                       fontSize: 18),
                                 ),
-                                style: ButtonStyle(),
                               ),
                               TextButton(
                                   onPressed: () {},
