@@ -10,10 +10,21 @@ class UntitlesPage extends StatefulWidget {
 List<String> States = [
   'Maharashtra',
   'Madhya Pradesh',
+  'Andhra Pradesh',
+  'Punjab',
+  'Rajasthan',
+  'Tamil Nadu',
+  'Kerala',
 ];
 
 class _UntitlesPageState extends State<UntitlesPage> {
-  String selectedValue = States.last;
+  String selectedValue1 = States.last;
+  String selectedValue2 = States.last;
+  String selectedValue3 = States.last;
+  String selectedValue4 = States.last;
+  String selectedValue5 = States.last;
+  String selectedValue6 = States.last;
+  String selectedValue7 = States.last;
 
   @override
   Widget build(BuildContext context) {
@@ -21,98 +32,312 @@ class _UntitlesPageState extends State<UntitlesPage> {
       body: SizedBox.expand(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 40.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              dropDownTitle(
-                selectedValue: selectedValue,
-                list: States,
-                title: 'Select States',
-                onChanged: (value) {
-                  setState(
-                    () {
-                      selectedValue = '${value}';
-                    },
-                  );
-                },
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Select State', style: TextStyle(fontSize: 25),),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            menuMaxHeight: 200,
+                            value: selectedValue1,
+                            items: States.map<DropdownMenuItem<String>>(
+                                (String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                            onChanged: (value) {
+                              setState(
+                                () {
+                                  selectedValue1 = '${value}';
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ), //Select State
+              SizedBox(height: 30,),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Select District', style: TextStyle(fontSize: 25),),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            menuMaxHeight: 200,
+                            value: selectedValue2,
+                            items: States.map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                            onChanged: (value) {
+                              setState(
+                                    () {
+                                  selectedValue2 = '${value}';
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ), //Select District
+              SizedBox(height: 30,),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Select Development Land Type', style: TextStyle(fontSize: 25),),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            menuMaxHeight: 200,
+                            value: selectedValue3,
+                            items: States.map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                            onChanged: (value) {
+                              setState(
+                                    () {
+                                  selectedValue3 = '${value}';
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ), //Select Development Land Type
+              SizedBox(height: 30,),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Select Taluka', style: TextStyle(fontSize: 25),),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            menuMaxHeight: 200,
+                            value: selectedValue4,
+                            items: States.map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                            onChanged: (value) {
+                              setState(
+                                    () {
+                                  selectedValue4 = '${value}';
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
+              SizedBox(height: 30,),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Select Village', style: TextStyle(fontSize: 25),),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            menuMaxHeight: 200,
+                            value: selectedValue5,
+                            items: States.map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                            onChanged: (value) {
+                              setState(
+                                    () {
+                                  selectedValue5 = '${value}';
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ), //Select Village
+              SizedBox(height: 30,),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Select Location Level', style: TextStyle(fontSize: 25),),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            menuMaxHeight: 200,
+                            value: selectedValue6,
+                            items: States.map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                            onChanged: (value) {
+                              setState(
+                                    () {
+                                  selectedValue6 = '${value}';
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ), //Select Location Level
+              SizedBox(height: 30,),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Select Location Level List Area', style: TextStyle(fontSize: 25),),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10.0, vertical: 5),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            menuMaxHeight: 200,
+                            value: selectedValue7,
+                            items: States.map<DropdownMenuItem<String>>(
+                                    (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value),
+                                  );
+                                }).toList(),
+                            onChanged: (value) {
+                              setState(
+                                    () {
+                                  selectedValue7 = '${value}';
+                                },
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ), //Select Location Level List Area
+              SizedBox(height: 30,),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class dropDownTitle extends StatelessWidget {
-  const dropDownTitle({
-    super.key,
-    required this.selectedValue,
-    this.onChanged,
-    required this.list,
-    required this.title,
-  });
-
-  final String selectedValue;
-  final Function(String?)? onChanged;
-  final List<String> list;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(title, style: TextStyle(fontSize: 25),),
-        dropDownWidget(
-          selectedValue: selectedValue,
-          list: States,
-          onChanged: (value) {},
-        ),
-      ],
-    );
-  }
-}
-
-class dropDownWidget extends StatelessWidget {
-  const dropDownWidget({
-    super.key,
-    required this.selectedValue,
-    this.onChanged,
-    required this.list,
-  });
-
-  final String selectedValue;
-  final Function(String?)? onChanged;
-  final List<String> list;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
-          border: Border.all(
-            color: Colors.black,
-            width: 1,
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
-          child: DropdownButtonHideUnderline(
-            child: DropdownButton<String>(
-              menuMaxHeight: 200,
-              value: selectedValue,
-              items: list.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: onChanged,
-            ),
           ),
         ),
       ),
