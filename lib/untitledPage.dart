@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_signup/assets/RoundedButton.dart';
 
 class UntitlesPage extends StatefulWidget {
   const UntitlesPage({Key? key}) : super(key: key);
@@ -337,6 +338,7 @@ class _UntitlesPageState extends State<UntitlesPage> {
                 ],
               ), //Select Location Level List Area
               SizedBox(height: 30,),
+              RoundedButton(text: 'View Valuation Rates', press: (){}, color: Colors.blue, textColor: Colors.white, length: 0.85,)
             ],
           ),
         ),
