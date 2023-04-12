@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_signup/untitledPage.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -78,7 +79,7 @@ class _MyLoginState extends State<MyLogin> {
                                 backgroundColor: Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: () {},
+                                    onPressed: () {Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>UntitlesPage()));},
                                     icon: Icon(
                                       Icons.arrow_forward,
                                     )),
